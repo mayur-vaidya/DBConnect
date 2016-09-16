@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+   <body><center>
+    <h2>Generated result corresponding to your entered details are: </h2>
+      <table border = 1>
+         <thead>
+            <td>First Name:</td>
+            <td>Last Name:</td>
+            <td>Address:</td>
+            <td>Mobile:</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["firstname"]}}</td>
+               <td>{{row["lastname"]}}</td>
+               <td> {{ row["address"]}}</td>
+               <td>{{row['mobile']}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+<br><br>
+      <a href = "/">Go back to home page</a>
+</center>
+   </body>
+</html>
